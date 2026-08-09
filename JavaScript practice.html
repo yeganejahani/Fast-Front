@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <input id="name" placeholder="نام">
+    <br><br>
+    <input id="lastname" placeholder="نام خانوادگی">
+    <br><br>
+    <input id="age" placeholder="سن">
+    <br><br>
+    <input id="major" placeholder="رشته تحصیلی">
+    <br><br>
+    <input id="score1" placeholder="نمره اول">
+    <br><br>
+    <input id="score2" placeholder="نمره دوم">
+    <br><br>
+    <input id="score3" placeholder="نمره سوم">
+    <br><br>
+    <button onclick="result()">ثبت</button>
+    <p id="sum"></p>
+    <p id="avg"></p>
+    <p id="result"></p>
+
+    <script>
+        function result(){
+            var name = document.getElementById("name").value
+            var lastname = document.getElementById("lastname").value
+            var age = document.getElementById("age").value
+            var major = document.getElementById("major").value
+            var s1 = Number(document.getElementById("score1").value)
+            var s2 = Number(document.getElementById("score2").value)
+            var s3 = Number(document.getElementById("score3").value)
+            var sum = s1 + s2 + s3
+            var avg = sum / 3
+            document.getElementById("sum").innerHTML = "مجموع نمرات: " + sum
+            document.getElementById("avg").innerHTML = "میانگین نمرات: " + avg
+            document.getElementById("result").innerHTML = "سلام، من " + name + " " + lastname + " " + "هستم." + age + "سال دارم و در رشته " + major + "تحصیل میکنم و معدل من " + avg + "است."
+        }
+    </script>
+</body>
+</html>
